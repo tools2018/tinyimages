@@ -1,7 +1,5 @@
-"""
-使用 https://tinypng.com/developers/reference#compressing-images 提供的接口进行图片压缩
-"""
-
+#!/bin/env python
+# -*- coding: utf8 -*-
 import os
 import sys
 import getopt

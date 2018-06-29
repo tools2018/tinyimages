@@ -4,13 +4,10 @@
 
 - 脚本使用python3编写,确认你的操作系统安装了python3
 - Mac上安装Python3, 推荐使用Homebrew安装,
-	
 		$ brew install python3
 	 brew装好python3时候会自动安装pip3(python的包管理工具),`tinyImages.py`脚本使用前需要先安装第三方模块。
-
 -----------
 ### `tinyImages.py`批量图片压缩脚本
-
 
 1. 使用前面提到的pip3安装第三方模块
 		
@@ -26,17 +23,14 @@
 	
 	![运行示例](http://oqc26haeb.bkt.clouddn.com/readmeImages/tinyShot.png)
 
-	
 
 - 更多设置,使用命令行参数:
 
         $ python3 tinyImages.py  -i 输入路径 -a APIKey [-o 输出路径] [-r(直接替换原文件)]
 
-	
 	比如你想压缩`/Users/S/Desktop/Assets.xcassets`下的所有图片并且输出到`/Users/S/Desktop/newImages`:
     
         $ python3 tinyImages.py -i /Users/S/Desktop/Assets.xcassets -a wwj8jDJZG0Y7b80jMakg3SJm64BrK8wR -o /Users/S/Desktop/newImages
-
 
 
 - 目前一次性替换最大数量为500,后续版本应该会添加多个APIkey的支持,一个apikey使用达到上限后自动切换。突破压缩数量最大为500的限制
@@ -46,7 +40,6 @@
 1.  直接运行脚本
 	   
 	    $ python3 remove1xImage.py
-
 
     > iOS有两倍图,三倍图,实际项目中如果3种图片都有的时候1x图片是使用不到的,可以通过脚本批量删除。当图片不是1x,2x,3x都有的时候不会进行删除操作，比如只有一张1x图，2x,3x图片都是没有的情况下会直接跳过，避免出现误删的情况。
 
@@ -65,7 +58,12 @@
 -----------
 ### `imageSize.py`按大小输出图片文件名字
 - 统计文件夹下图片大小，输出文件路径,默认输出前10
-
         $ python3 imageSize.py -i 项目路径 [-l 打印数量默认为10]
 		#打印/Users/S/Desktop/images路径下最大的20张图片的路径
         $ python3 imageSize.py -i /Users/S/Desktop/images -l 20
+
+####改进后
+----------------
+task.txt 为需要压图的文件夹路径
+run autotiny.py
+python tinyImages.py  -i   -a  lvOp5HoHLRi2OvjD-vkFCr6zLcLmvnaN  -r
